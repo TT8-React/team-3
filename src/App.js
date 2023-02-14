@@ -1,8 +1,8 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
-import { ThemeProvider } from 'styled-components';
-import { defaultTheme } from './global/themes';
-import Global from './global/global';
+import { ThemeProvider } from "styled-components";
+import { defaultTheme } from "./global/themes";
+import Global from "./global/global";
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
 }
 
 const Test = styled.div`
-  color: ${({theme}) => theme.pallet.blueColor};
-`
+  color: ${({ theme }) => theme.pallet.blueColor};
+`;
 
 export default App;
