@@ -1,6 +1,7 @@
 import styled from "styled-components";
-// ! how to use
+
 /*
+        ! how to use
         <H1
           weight="400"
           weight="500"
@@ -15,9 +16,9 @@ import styled from "styled-components";
           color="dark"
           -----------
           margin="10px 10px 20px 5px"
-          //! the same as margin shortcut in css
+          ! the same as margin shortcut in css
           padding="10px 10px 20px 5px"
-          //! the same as padding shortcut in css
+          ! the same as padding shortcut in css
           -----------
           align="center"
           align="left"
@@ -28,8 +29,20 @@ import styled from "styled-components";
           transform="capitalize"
           -----------
           lineHeight="250"
-          //! number in px not %
+          ! number in px not %
         >hello world</H1>
+*/
+
+/*
+! font sizes 
+  H1 -> font-size: 36px;
+  H2 -> font-size: 24px; === 23px
+  H3 -> font-size: 22px;
+  H4 -> font-size: 20px; === 19px
+  H5 ->  font-size: 18px; 
+  body1 -> font-size: 16px;  
+  body2 -> font-size: 15px;
+  body3 -> font-size: 14px;
 */
 
 const Typography = (props) => {
@@ -54,9 +67,6 @@ const getColorsFromTheme = (color, theme) => {
     if (color === "gray/300") return theme.pallet.gray300
     if (color === "gray/400") return theme.pallet.gray400
 }
-
-
-//   font-weight: 400(14px , 15px , 16px) | 500(20px)| 600 (24px , 18px) | 700 (36px , 16px , 18px) 
 
 export const H1 = styled.h1`
     text-transform:lowercase;
