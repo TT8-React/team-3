@@ -9,7 +9,7 @@ const Button1 = ({ title }) => {
 export default Button1;
 
 export const Button = styled.button`
-  width: 86px;
+  width: ${(props) => props.width};
   height: 40px;
   border-radius: 5px;
   padding: 0 16px;
