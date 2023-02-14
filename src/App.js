@@ -7,7 +7,7 @@ import Global from './global/global';
 function App() {
   return (
     <>
-      <ThemeProvider theme={lightTheme}>
+      <ThemeProvider theme={defaultTheme}>
         <Global />
         <Test>Team 3</Test>
       </ThemeProvider>
