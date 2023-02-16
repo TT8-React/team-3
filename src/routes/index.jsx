@@ -36,6 +36,7 @@ const Router = () => {
 }
 
 export const PATHS = {
+  DASHBOARD: "/",
   LOGIN: "/login",
   SIGN_UP: "/signup",
   REPORT: "/report",

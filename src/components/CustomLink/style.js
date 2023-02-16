@@ -8,6 +8,10 @@ const Style = styled.span`
         line-height: inherit;
         text-decoration: none;
         color: ${props => props.color ? getColorFromTheme(props.color, props.theme) : "inherit"};
+
+        &.active{
+            font-weight: 700;
+        }
     }
 `
 
