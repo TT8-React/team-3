@@ -15,6 +15,7 @@ const pallet = {
   gray200: "#A5A5A5",
   gray300: "#D9D9D9",
   gray400: "#EFEFEF",
+  gray500: "#848484",
   dark: "#000000",
   light: "#FFFFFF",
 }
