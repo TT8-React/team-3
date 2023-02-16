@@ -35,4 +35,16 @@ const Router = () => {
   )
 }
 
+export const PATHS = {
+  DASHBOARD: "/",
+  LOGIN: "/login",
+  SIGN_UP: "/signup",
+  REPORT: "/report",
+  DATA_UPLOAD: "/dataUpload",
+  ANALYTICS: "/analytics",
+  ENVIRONMENT: "/analytics/environment",
+  SOCIAL: "/analytics/social",
+  GOVERNANCE: "/analytics/governance",
+  COMPANY_DETAILS: "/companyDetails",
+}
 export default Router
