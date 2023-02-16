@@ -1,10 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-const CustomLink = ({ to }) => {
+import Style from './style'
+const CustomLink = ({ to, children, color }) => {
     return (
-        <div>
-            <Link to={to} />
-        </div>
+        <Style color={color}>
+            <Link to={to}>{children}</Link>
+        </Style>
     )
 }
 
