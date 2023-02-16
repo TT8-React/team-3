@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { defaultTheme } from "../../global/themes";
 
 const Header = () => {
   return <Header></Header>
@@ -9,7 +8,7 @@ const Header = () => {
 export default Header;
 
 export const HeaderStyle = styled.div`
-  width: 1242px;
+  width: 100%;
   height: 91px;
-  background-color: ${defaultTheme.pallet.gray100};
+  background-color: ${(props) => props.theme.pallet.gray100};
 `;
