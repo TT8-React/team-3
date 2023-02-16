@@ -2,13 +2,13 @@ import styled from "styled-components";
 import { defaultTheme } from "../../global/themes";
 import React from "react";
 
-const Button1 = ({ title }) => {
-  return <Button>{title}</Button>
+const Button = ({ title, width }) => {
+  return <ButtonStyle width={width}>{title}</ButtonStyle>
 };
 
-export default Button1;
+export default Button;
 
-export const Button = styled.button`
+export const ButtonStyle = styled.button`
   width: ${(props) => props.width};
   height: 40px;
   border-radius: 5px;
