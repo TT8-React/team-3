@@ -16,8 +16,10 @@ const pallet = {
   gray300: "#D9D9D9",
   gray400: "#EFEFEF",
   gray500: "#848484",
+  gray600: "#AAAAAA",
   dark: "#000000",
   light: "#FFFFFF",
+  light100: "#F2F2F2",
 }
 
 export const defaultTheme = {
