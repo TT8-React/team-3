@@ -1,4 +1,6 @@
 import React from 'react'
+// layout
+import dashboardLayout from '../../layouts/DashboardPages'
 
 const CompanyDetails = () => {
   return (
@@ -6,4 +8,4 @@ const CompanyDetails = () => {
   )
 }
 
-export default CompanyDetails
+export default dashboardLayout(CompanyDetails)

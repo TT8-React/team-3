@@ -1,4 +1,6 @@
 import React from 'react'
+// layout
+import dashboardLayout from '../../layouts/DashboardPages'
 
 const Environment = () => {
   return (
@@ -6,4 +8,4 @@ const Environment = () => {
   )
 }
 
-export default Environment
+export default dashboardLayout(Environment)
