@@ -3,7 +3,7 @@ import { defaultTheme } from "../../global/themes";
 import React from "react";
 
 const Button1 = ({ title }) => {
-  return <Button>{title}</Button>;
+  return <Button>{title}</Button>
 };
 
 export default Button1;
