@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import getColorFromTheme from "../../utils/getColorFromTheme";
 
 /*
         ! how to use
@@ -47,7 +48,7 @@ import styled from "styled-components";
 
 const Typography = (props) => {
     const result = `
-        color: ${props.color ? getColorsFromTheme(props.color, props.theme) : props.theme.pallet.dark};
+        color: ${props.color ? getColorFromTheme(props.color, props.theme) : props.theme.pallet.dark};
         ${props.margin ? "margin: " + props.margin + ";" : ""}
         ${props.align ? "text-align: " + props.align + ";" : ""}
         ${props.padding ? "padding: " + props.padding + ";" : ""}
@@ -56,16 +57,6 @@ const Typography = (props) => {
         ${props.lineHeight ? "line-height:" + props.lineHeight + "px;" : ""}
         `
     return result;
-}
-
-const getColorsFromTheme = (color, theme) => {
-    if (color === "light") return theme.pallet.light
-    if (color === "dark") return theme.pallet.dark
-    if (color === "gray/100") return theme.pallet.gray100
-    if (color === "gray/200") return theme.pallet.gray200
-
-    if (color === "gray/300") return theme.pallet.gray300
-    if (color === "gray/400") return theme.pallet.gray400
 }
 
 export const H1 = styled.h1`
