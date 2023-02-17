@@ -1,4 +1,6 @@
 import React from 'react'
+// layout
+import dashboardLayout from '../../layouts/DashboardPages'
 
 const CustomizeReport = () => {
     return (
@@ -6,4 +8,4 @@ const CustomizeReport = () => {
     )
 }
 
-export default CustomizeReport
+export default dashboardLayout(CustomizeReport)

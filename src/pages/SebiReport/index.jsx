@@ -1,4 +1,6 @@
 import React from 'react'
+// layout
+import dashboardLayout from '../../layouts/DashboardPages'
 
 const SebiReport = () => {
     return (
@@ -6,4 +8,4 @@ const SebiReport = () => {
     )
 }
 
-export default SebiReport
+export default dashboardLayout(SebiReport)
