@@ -4,7 +4,9 @@ import dashboardLayout from '../../layouts/DashboardPages'
 
 const Environment = () => {
   return (
-    <div>Environment</div>
+    <div>Environment
+      {{}.map()}
+    </div>
   )
 }
 

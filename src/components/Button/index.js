@@ -18,7 +18,7 @@ export const ButtonStyle = styled.button`
 
   transition: 0.3s box-shadow ease-in-out;
   &:hover{
-    box-shadow: inset 100vw 0 0 0 ${({ theme: { colors: { primary } } }) => primary.main};
+    box-shadow: inset 100vw 0 0 0 ${({theme})=> theme.pallet.light200};
     transition: 0.6s box-shadow ease-in-out;
   }
 `;
