@@ -7,12 +7,17 @@ import Global from './global/global';
 // routes
 import Router from './routes';
 
+// Error Boundary
+import ErrorBoundary from './components/ErrorBoundary';
+
 function App() {
   return (
     <>
       <ThemeProvider theme={defaultTheme}>
         <Global />
-        <Router />
+        <ErrorBoundary>
+          <Router />
+        </ErrorBoundary>
       </ThemeProvider>
     </>
   );
