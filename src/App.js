@@ -1,14 +1,13 @@
-
-//themes and global styles 
-import { ThemeProvider } from 'styled-components';
-import { defaultTheme } from './global/themes';
-import Global from './global/global';
+//themes and global styles
+import { ThemeProvider } from "styled-components";
+import { defaultTheme } from "./global/themes";
+import Global from "./global/global";
 
 // routes
-import Router from './routes';
+import Router from "./routes";
 
 // Error Boundary
-import ErrorBoundary from './components/ErrorBoundary';
+import ErrorBoundary from "./components/ErrorBoundary";
 
 function App() {
   return (
@@ -22,6 +21,5 @@ function App() {
     </>
   );
 }
-
 
 export default App;
