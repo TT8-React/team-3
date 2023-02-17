@@ -7,11 +7,7 @@ import Style from './style'
 // icons
 import closeImage from '../../assets/images/icons/close.png';
 const Modal = ({ title, children, isOpen, close }) => {
-    if (!isOpen) {
-        return <></>
-    }
-
-    return createPortal(<Style>
+    return createPortal(<Style isOpen={isOpen}>
         <div className="modal_closer" onClick={close} />
         <div className="overlay">
             <div className="modal">

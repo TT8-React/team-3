@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const Style = styled.div`
+    ${props => !props.isOpen ? "display:none;" : ""}
     .modal_closer , .overlay{
         position: fixed;
         top: 0;

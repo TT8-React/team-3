@@ -1,4 +1,6 @@
 import React from 'react'
+// layout
+import dashboardLayout from '../../layouts/DashboardPages'
 
 const GriReport = () => {
     return (
@@ -6,4 +8,4 @@ const GriReport = () => {
     )
 }
 
-export default GriReport
+export default dashboardLayout(GriReport)
