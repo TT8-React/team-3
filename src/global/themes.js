@@ -20,6 +20,7 @@ const pallet = {
   dark: "#000000",
   light: "#FFFFFF",
   light100: "#F2F2F2",
+  light200: "#F5F5F5",
 }
 
 export const defaultTheme = {

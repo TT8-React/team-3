@@ -9,7 +9,7 @@ const Global = createGlobalStyle`
     }
 
     body{
-        background-color: bisque;
+        background-color: ${props => props.theme.pallet.light200};
     }
 
     a{
