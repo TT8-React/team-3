@@ -1,3 +1,4 @@
+
 //themes and global styles 
 import { ThemeProvider } from 'styled-components';
 import { defaultTheme } from './global/themes';
@@ -16,5 +17,6 @@ function App() {
     </>
   );
 }
+
 
 export default App;

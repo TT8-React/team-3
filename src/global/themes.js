@@ -24,3 +24,4 @@ export const defaultTheme = {
   typography,
   pallet,
 }
+
