@@ -15,6 +15,5 @@ export default Avatar;
 export const AvatarStyle = styled.div`
   width: 57px;
   height: 57px;
-  background-color: azure;
   border-radius: 50%;
 `;
