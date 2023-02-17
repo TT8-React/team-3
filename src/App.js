@@ -1,15 +1,17 @@
-import styled from "styled-components";
+//themes and global styles 
+import styled, { ThemeProvider } from 'styled-components';
+import { defaultTheme } from './global/themes';
+import Global from './global/global';
 
-import { ThemeProvider } from "styled-components";
-import { defaultTheme } from "./global/themes";
-import Global from "./global/global";
+// routes
+import Router from './routes';
 
 function App() {
   return (
     <>
       <ThemeProvider theme={defaultTheme}>
         <Global />
-        <Test>Team 3</Test>
+        <Router />
       </ThemeProvider>
     </>
   );
