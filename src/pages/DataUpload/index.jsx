@@ -1,4 +1,6 @@
 import React from 'react'
+// layout
+import dashboardLayout from '../../layouts/DashboardPages'
 
 const DataUpload = () => {
   return (
@@ -6,4 +8,4 @@ const DataUpload = () => {
   )
 }
 
-export default DataUpload
+export default dashboardLayout(DataUpload)

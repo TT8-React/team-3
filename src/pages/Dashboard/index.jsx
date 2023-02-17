@@ -1,9 +1,13 @@
 import React from 'react'
+// layout
+import dashboardLayout from '../../layouts/DashboardPages'
 
 const Dashboard = () => {
   return (
-    <div>Dashboard</div>
+    <div>
+      Test
+    </div>
   )
 }
 
-export default Dashboard
+export default dashboardLayout(Dashboard)
