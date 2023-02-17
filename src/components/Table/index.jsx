@@ -8,7 +8,7 @@ import {
   TableRow,
   TableTitle,
 } from "./table.js";
-import tableData from "./fackData.js";
+import tableData from "../../mock/fakeDataTable.js";
 import { DeleteIcon, EditIcon } from "../Icons";
 
 let nextId = 1;
