@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Avatar from "../Avatar";
+import Avatar from "../Avatar/index";
 import { H2 } from "../Typography";
 const Header = ({ title }) => {
   return (
@@ -19,5 +19,6 @@ export const HeaderStyle = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 15px;
   background-color: ${(props) => props.theme.pallet.gray100};
 `;
