@@ -2,11 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import Avatar from "../Avatar/index";
 import { H2 } from "../Typography";
+import avatar from "../../assets/images/avatar.png";
 const Header = ({ title }) => {
   return (
     <HeaderStyle>
       <H2>{title}</H2>
-      <Avatar />
+      <Avatar avatar={avatar} />
     </HeaderStyle>
   );
 };
