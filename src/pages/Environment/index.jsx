@@ -1,5 +1,8 @@
 import React from "react";
+
+//components
 import DashboardItem from "../../components/DashboardItem";
+
 // layout
 import dashboardLayout from "../../layouts/DashboardPages";
 
