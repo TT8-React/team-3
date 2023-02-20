@@ -17,6 +17,7 @@ import {
 
 import CreateReport from '../pages/CreateReport';
 import CustomizeReport from '../pages/CustomizeReport';
+import EditReport from '../pages/EditReport';
 import GriReport from '../pages/GriReport';
 import MyReport from '../pages/MyReport';
 import ProfileDetails from '../pages/ProfileDetails';
@@ -30,11 +31,12 @@ const Router = () => {
       <Route path="/signup" element={<Signup />} />
       <Route path="/report">
         <Route index element={<Report />} />
-        <Route path="view-all-reports" element={<MyReport />} />
-        <Route path="create" element={<CreateReport />} />
-        <Route path="sebi" element={<SebiReport />} />
-        <Route path="gri" element={<GriReport />} />
-        <Route path="customize" element={<CustomizeReport />} />
+        <Route path='view-all-reports' element={<MyReport />} />
+        <Route path='edit' element={<EditReport />} />
+        <Route path='create' element={<CreateReport />} />
+        <Route path='sebi' element={<SebiReport />} />
+        <Route path='gri' element={<GriReport />} />
+        <Route path='customize' element={<CustomizeReport />} />
       </Route>
       <Route path="/dataUpload" element={<DataUpload />} />
       <Route path="/analytics">
@@ -56,6 +58,7 @@ export const PATHS = {
   SIGN_UP: "/signup",
   REPORT: "/report",
   REPORT_VIEW_ALL_REPORTS: "/report/view-all-reports",
+  REPORT_EDIT: "/report/edit",
   REPORT_SEBI: "/report/sebi",
   REPORT_GRI: "/report/gri",
   REPORT_CUSTOMIZE: "/report/customize",

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const Style = styled.div`
+    
     .back_container{
         padding: 25px 50px;
         display: flex;
@@ -8,11 +9,19 @@ const Style = styled.div`
         align-items: center;
     }
 
-    .links{
-        padding: 35px 50px;
+    .inputs__grid{
+        padding: 25px 50px;
         display: grid;
         grid-template-columns: repeat(3 , 1fr);
-        gap: 60px;
+        gap: 30px;
+    }
+
+    .submit_container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 80px;
+        margin-bottom: 80px;
     }
 `
 

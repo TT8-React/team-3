@@ -49,6 +49,19 @@ const Style = styled.div`
         }
     }
     
+    
+    .modal_inputs{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    .continue_btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+    }
 `
 
 export default Style;

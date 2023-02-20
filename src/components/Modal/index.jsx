@@ -6,7 +6,11 @@ import Style from './style'
 
 // icons
 import closeImage from '../../assets/images/icons/close.png';
-const Modal = ({ title, children, isOpen, close }) => {
+import LabelInput from '../LabelInput';
+import CustomLink from '../CustomLink';
+import Button from '../Button';
+import { PATHS } from '../../routes';
+const Modal = ({ title, isOpen, close }) => {
     return createPortal(<Style isOpen={isOpen}>
         <div className="modal_closer" onClick={close} />
         <div className="overlay">
@@ -18,7 +22,20 @@ const Modal = ({ title, children, isOpen, close }) => {
                     </button>
                 </div>
                 <div className="body">
-                    {children}
+                    <div className="modal_content">
+                        <div className="modal_inputs">
+                            <LabelInput label="From" type="date" />
+                            <LabelInput label="to" type="date" />
+                        </div>
+
+                        <div className="continue_btn">
+                            <CustomLink to={PATHS.REPORT_CUSTOMIZE}>
+                                <Button>
+                                    Continue for next step
+                                </Button>
+                            </CustomLink>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
