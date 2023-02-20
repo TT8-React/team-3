@@ -1,13 +1,17 @@
-import React from 'react'
+import React from "react";
+
 // layout
-import dashboardLayout from '../../layouts/DashboardPages'
+import dashboardLayout from "../../layouts/DashboardPages";
+
+// components
+import DashboardItem from "../../components/DashboardItem";
 
 const Dashboard = () => {
   return (
-    <div>
-      Test
-    </div>
-  )
-}
+    <>
+      <DashboardItem />
+    </>
+  );
+};
 
-export default dashboardLayout(Dashboard)
+export default dashboardLayout(Dashboard);
