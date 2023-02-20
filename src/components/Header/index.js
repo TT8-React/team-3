@@ -28,6 +28,8 @@ const Header = () => {
           return "Customize Report";
         case PATHS.REPORT_VIEW_ALL_REPORTS:
           return "My Report";
+        case PATHS.REPORT_EDIT:
+          return "My Report";
         case PATHS.DATA_UPLOAD:
           return "Data upload";
         case PATHS.ENVIRONMENT:

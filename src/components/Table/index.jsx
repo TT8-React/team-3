@@ -11,6 +11,8 @@ import {
 
 import tableData from "../../mock/fakeDataTable.js";
 import { DeleteIcon, EditIcon } from "../icons";
+import CustomLink from "../CustomLink/index.jsx";
+import { PATHS } from "../../routes/index.jsx";
 
 let nextId = 1;
 
@@ -32,7 +34,9 @@ const Table = () => {
               <TableField key={nextId++}>{rowField}</TableField>
             ))}
             <ActionField>
-              <EditIcon />
+              <CustomLink to={PATHS.REPORT_EDIT}>
+                <EditIcon />
+              </CustomLink>
               <DeleteIcon />
             </ActionField>
           </TableRow>
