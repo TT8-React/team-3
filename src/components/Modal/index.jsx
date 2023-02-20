@@ -22,7 +22,6 @@ const Modal = ({ title, children, isOpen, close }) => {
                 </div>
             </div>
         </div>
-        HELLO WORLD
     </Style>, document.getElementById("modal"))
 }
 

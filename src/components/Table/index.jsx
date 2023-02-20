@@ -1,21 +1,22 @@
 import React from "react";
 import {
   ActionField,
-  Table,
+  Table as TableStyle,
   TableBody,
   TableField,
   TableHead,
   TableRow,
   TableTitle,
 } from "./table.js";
+
 import tableData from "../../mock/fakeDataTable.js";
-import { DeleteIcon, EditIcon } from "../Icons";
+import { DeleteIcon, EditIcon } from "../icons";
 
 let nextId = 1;
 
-function Index() {
+const Table = () => {
   return (
-    <Table>
+    <TableStyle>
       <TableHead>
         <TableRow>
           {tableData.header.map((item) => (
@@ -37,8 +38,8 @@ function Index() {
           </TableRow>
         ))}
       </TableBody>
-    </Table>
+    </TableStyle>
   );
 }
 
-export default Index;
+export default Table;
