@@ -2,7 +2,11 @@ import React from "react";
 import styled from "styled-components";
 
 const Chart = ({ img, width }) => {
-  return <ChartStyle src={img} alt="" width={width} />;
+  return (
+    <ChartStyle width={width}>
+      <img src={img} alt="" />
+    </ChartStyle>
+  );
 };
 
 export default Chart;
