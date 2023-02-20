@@ -1,4 +1,7 @@
 import React, { useState } from 'react'
+import Button from '../../components/Button'
+import CustomLink from '../../components/CustomLink'
+import Divider from '../../components/Divider'
 import Modal from '../../components/Modal'
 // layout
 import dashboardLayout from '../../layouts/DashboardPages'
@@ -18,6 +21,14 @@ const Report = () => {
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, doloribus?
       </Modal>
       <Style>
+        <div className="back_container">
+          <CustomLink to={PATHS.REPORT_EDIT}>
+            <Button>
+              Create report
+            </Button>
+          </CustomLink>
+        </div>
+        <Divider />
         <div className="links">
           <ReportLink name="SEBI report" to={PATHS.REPORT_SEBI} />
           <ReportLink name="GRI report" to={PATHS.REPORT_GRI} />

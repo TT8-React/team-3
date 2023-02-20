@@ -15,6 +15,14 @@ const Style = styled.div`
         grid-template-columns: repeat(3 , 1fr);
         gap: 30px;
     }
+
+    .submit_container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
 `
 
 export default Style;

@@ -18,19 +18,27 @@ const EditReport = () => {
                 </CustomLink>
             </div>
             <Divider />
-            <div className="inputs__grid">
-                <LabelInput label="Name" placeholder="Enter name"/>
-                <LabelInput label="Report1" placeholder="Enter Report1"/>
-                <LabelInput label="Report2" placeholder="Enter Report2"/>
+            <form>
+                <div className="inputs__grid">
+                    <LabelInput label="Name" placeholder="Enter name" />
+                    <LabelInput label="Report1" placeholder="Enter Report1" />
+                    <LabelInput label="Report2" placeholder="Enter Report2" />
 
-                <LabelInput label="Report3" placeholder="Enter Report3"/>
-                <LabelInput label="Report4" placeholder="Enter Report4"/>
-                <LabelInput label="Report5" placeholder="Enter Report5"/>
+                    <LabelInput label="Report3" placeholder="Enter Report3" />
+                    <LabelInput label="Report4" placeholder="Enter Report4" />
+                    <LabelInput label="Report5" placeholder="Enter Report5" />
 
-                <LabelInput label="Report6" placeholder="Enter Report6"/>
-                <LabelInput label="Report7" placeholder="Enter Report7"/>
-                <LabelInput label="Report8" placeholder="Enter Report8"/>
-            </div>
+                    <LabelInput label="Report6" placeholder="Enter Report6" />
+                    <LabelInput label="Report7" placeholder="Enter Report7" />
+                    <LabelInput label="Report8" placeholder="Enter Report8" />
+                </div>
+
+                <div className="submit_container">
+                    <Button>
+                        Submit
+                    </Button>
+                </div>
+            </form>
         </Style>
     )
 }
