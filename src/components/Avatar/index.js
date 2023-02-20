@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import avatar from "../../assets/images/avatar.png";
 
-const Avatar = () => {
+const Avatar = ({ avatar }) => {
   return (
     <AvatarStyle>
       <img src={avatar} alt="" />
