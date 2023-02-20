@@ -14,10 +14,12 @@ import {
   Environment,
   CompanyDetails
 } from '../pages';
+
 import CreateReport from '../pages/CreateReport';
 import CustomizeReport from '../pages/CustomizeReport';
 import GriReport from '../pages/GriReport';
 import MyReport from '../pages/MyReport';
+import ProfileDetails from '../pages/ProfileDetails';
 import SebiReport from '../pages/SebiReport';
 
 const Router = () => {
@@ -42,6 +44,7 @@ const Router = () => {
         <Route path='governance' element={<Governance />} />
       </Route>
       <Route path='/companyDetails' element={<CompanyDetails />} />
+      <Route path='/profile-details' element={<ProfileDetails />} />
       <Route path='*' element={<NotFound />} />
     </Routes>
   )
@@ -62,6 +65,7 @@ export const PATHS = {
   SOCIAL: "/analytics/social",
   GOVERNANCE: "/analytics/governance",
   COMPANY_DETAILS: "/companyDetails",
+  PROFILE_DETAILS: "/profile-details",
 }
 
 export default Router
