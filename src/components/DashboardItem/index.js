@@ -2,12 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Chart from "../ChartComponent";
 
-// images
-import chart1 from "../../assets/images/Line chart.png";
-import chart2 from "../../assets/images/Ellipse (5).png";
-import chart3 from "../../assets/images/NBcharts-columnChats.png";
-
-const DashboardItem = () => {
+const DashboardItem = ({chart1,chart2,chart3}) => {
   return (
     <>
       <Grid>
