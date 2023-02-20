@@ -1,11 +1,15 @@
 import React from "react";
 import styled from "styled-components";
+import Label from "../title";
 
-const Chart = ({ img, width }) => {
+const Chart = ({ img, width, isVisiable }) => {
   return (
-    <ChartStyle width={width}>
-      <img src={img} alt="" />
-    </ChartStyle>
+    <>
+      <div>{isVisiable ? <Label title={isVisiable} /> : ""}</div>
+      <ChartStyle width={width}>
+        <img src={img} alt="" />
+      </ChartStyle>
+    </>
   );
 };
 
