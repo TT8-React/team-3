@@ -1,4 +1,3 @@
-
 const typography = {
   h1: "36px",
   h2: "24px",
@@ -21,12 +20,9 @@ const pallet = {
   light: "#FFFFFF",
   light100: "#F2F2F2",
   light200: "#F5F5F5",
-}
+};
 
 export const defaultTheme = {
   typography,
   pallet,
-
-}
-
-
+};
