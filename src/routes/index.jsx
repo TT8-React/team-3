@@ -1,5 +1,5 @@
-import React from 'react'
-import { Route, Routes } from 'react-router-dom';
+import React from "react";
+import { Route, Routes } from "react-router-dom";
 
 import {
   Login,
@@ -27,9 +27,9 @@ const Router = () => {
   return (
     <Routes>
       <Route index element={<Dashboard />} />
-      <Route path='/login' element={<Login />} />
-      <Route path='/signup' element={<Signup />} />
-      <Route path='/report'>
+      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<Signup />} />
+      <Route path="/report">
         <Route index element={<Report />} />
         <Route path='view-all-reports' element={<MyReport />} />
         <Route path='edit' element={<EditReport />} />
@@ -38,19 +38,19 @@ const Router = () => {
         <Route path='gri' element={<GriReport />} />
         <Route path='customize' element={<CustomizeReport />} />
       </Route>
-      <Route path='/dataUpload' element={<DataUpload />} />
-      <Route path='/analytics'>
+      <Route path="/dataUpload" element={<DataUpload />} />
+      <Route path="/analytics">
         <Route index element={<Analytics />} />
-        <Route path='environment' element={<Environment />} />
-        <Route path='social' element={<Social />} />
-        <Route path='governance' element={<Governance />} />
+        <Route path="environment" element={<Environment />} />
+        <Route path="social" element={<Social />} />
+        <Route path="governance" element={<Governance />} />
       </Route>
       <Route path='/companyDetails' element={<CompanyDetails />} />
       <Route path='/profile-details' element={<ProfileDetails />} />
       <Route path='*' element={<NotFound />} />
     </Routes>
-  )
-}
+  );
+};
 
 export const PATHS = {
   DASHBOARD: "/",
@@ -71,4 +71,4 @@ export const PATHS = {
   PROFILE_DETAILS: "/profile-details",
 }
 
-export default Router
+export default Router;
