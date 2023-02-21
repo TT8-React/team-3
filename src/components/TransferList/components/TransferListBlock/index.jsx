@@ -5,7 +5,8 @@ import Style from './style'
 const TransferListBlock = ({ move, list, isDestination }) => {
     return (
         <Style>
-            {list.map(el => <TransferListItem
+            {list.map((el, index) => <TransferListItem
+                key={index}
                 move={() => move(el.id)}
                 isDestination={isDestination}
                 key={el.id}
