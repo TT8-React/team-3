@@ -14,6 +14,7 @@ import Button from "../../components/Button";
 import { SchemaSignup } from "../../validation/validationSchema.js";
 import { LogInStyled } from "./SignupStyled.js";
 import Loading from "../../components/Loading";
+import { PATHS } from "../../routes";
 const initialState = {
   name: "",
   email: "",
@@ -123,7 +124,7 @@ const Signup = () => {
                 label="Password"
                 value={formState.password}
               />
-              <Link to="forgotPassword" className="forgot">
+              <Link to={PATHS.FORGOT_PASSWORD} className="forgot">
                 Forgotpassword ?
               </Link>
             </div>

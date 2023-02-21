@@ -14,6 +14,7 @@ import FormCard from "../../components/FormCard";
 import Title from "../../components/title";
 import { SchemaLogin } from "../../validation/validationSchema.js";
 import { LogInStyled } from "./LoginStyled.js";
+import { PATHS } from "../../routes";
 const initialState = {
   email: "",
   password: "",
@@ -116,7 +117,7 @@ const Login = () => {
                 value={formState.password}
               />
               <Link
-                to="forgotPassword"
+                to={PATHS.FORGOT_PASSWORD}
                 className="forgot"
                 style={{ color: "black", fontWeight: "bold" }}
               >
