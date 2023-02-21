@@ -1,6 +1,6 @@
 import { object, string } from "yup";
 
-export const validationSchemaSignIn = object().shape({
+export const SchemaLogin = object().shape({
   email: string()
     .email("the structure of email is not valid ")
     .required("The Email Field is required"),
@@ -8,7 +8,7 @@ export const validationSchemaSignIn = object().shape({
     .min(6, "Password must be at least 6 characters")
     .required("The Password Field  is required"),
 });
-export const validationSchemaRegister = object().shape({
+export const SchemaSignup = object().shape({
   name: string()
     .min(6, "Name should be more than 6 characters long")
     .max(20)
