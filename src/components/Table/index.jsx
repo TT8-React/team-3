@@ -21,8 +21,8 @@ const Table = () => {
     <TableStyle>
       <TableHead>
         <TableRow>
-          {tableData.header.map((item) => (
-            <TableTitle>{item}</TableTitle>
+          {tableData.header.map((item, index) => (
+            <TableTitle key={index}>{item}</TableTitle>
           ))}
           <TableTitle>Action</TableTitle>
         </TableRow>
