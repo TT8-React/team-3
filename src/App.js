@@ -8,14 +8,22 @@ import Router from "./routes";
 
 // Error Boundary
 import ErrorBoundary from "./components/ErrorBoundary";
+import { AuthContext } from "./context";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [authenticated, setAuthenticated] = useState(false);
+  useEffect(() => {
+    localStorage.getItem("token") && setAuthenticated(true);
+  }, []);
   return (
     <>
       <ThemeProvider theme={defaultTheme}>
         <Global />
         <ErrorBoundary>
-          <Router />
+          <AuthContext.Provider value={[authenticated, setAuthenticated]}>
+            <Router />
+          </AuthContext.Provider>
         </ErrorBoundary>
       </ThemeProvider>
     </>

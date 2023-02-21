@@ -2,7 +2,7 @@ import React from "react";
 import { Label, InputStyled } from "./style";
 const LabelInput = (props) => {
   return (
-    <div className={`inputBox ${props.className}`}>
+    <div>
       <Label htmlFor={props.id}>{props.label}</Label>
       <InputStyled
         type={props.type}

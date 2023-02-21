@@ -12,12 +12,12 @@ export const LoadingStyled = styled.div`
     height: 50px;
     border: 3px solid white;
     border-radius: 50%;
-    border-top-color: #3498db;
+    border-top-color: red;
     animation: ${rotateAnimation} 2s linear infinite;
   }
   .title {
     font-size: 2rem;
-    color: #3498db;
+    color: red;
     text-align: center;
     margin-top: 1rem;
   }
