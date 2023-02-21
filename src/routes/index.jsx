@@ -96,7 +96,7 @@ export const PATHS = {
   SIGN_UP: "/signup",
   FORGOT_PASSWORD: "/forgot-password",
   VERIFICATION: "/verification",
-  VERIFICATION: "/verified",
+  VERIFIED: "/verified",
   REPORT: "/report",
   REPORT_VIEW_ALL_REPORTS: "/report/view-all-reports",
   REPORT_EDIT: "/report/edit",
