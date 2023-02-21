@@ -45,7 +45,6 @@ const Router = () => {
           <EditReport />
         </RequiresAuth>
         } />
-
         <Route path='create' element={<RequiresAuth>
           <CreateReport />
         </RequiresAuth>} />
