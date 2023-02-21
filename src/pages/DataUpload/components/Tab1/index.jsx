@@ -1,23 +1,12 @@
 import React from 'react'
-import Button from '../../components/Button'
-import CustomLink from '../../components/CustomLink'
-import ReportTable from '../../components/ReportTable'
-import SectionDropDown from '../../components/SectionDropDown'
-// layout
-import dashboardLayout from '../../layouts/DashboardPages'
-import { PATHS } from '../../routes'
+import ReportTable from '../../../../components/ReportTable'
+import SectionDropDown from '../../../../components/SectionDropDown'
 import Style from './style'
 
-const SebiReport = () => {
+const Tab1 = () => {
+    console.log("RUN")
     return (
         <Style>
-            <div className="back_container">
-                <CustomLink to={PATHS.REPORT}>
-                    <Button>
-                        Back
-                    </Button>
-                </CustomLink>
-            </div>
             <div className="grid">
                 <div>
                     <SectionDropDown title="Section A" items={[
@@ -52,7 +41,6 @@ const SebiReport = () => {
                     ]} />
                 </div>
 
-
                 <ReportTable content={[
                     "Corporate Identity Number (CIN) of the Company",
                     "Name of the comapny",
@@ -72,4 +60,4 @@ const SebiReport = () => {
     )
 }
 
-export default dashboardLayout(SebiReport)
+export default Tab1
