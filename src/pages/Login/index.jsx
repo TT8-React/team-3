@@ -1,6 +1,6 @@
 import axios from "axios";
-import React, { useContext, useReducer } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useEffect, useReducer } from "react";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { ACTIONS } from "../../action";
 import { API } from "../../Api";
 import Error from "../../components/Error";
@@ -44,12 +44,14 @@ const reducer = (state, action) => {
 };
 
 const Login = () => {
+  const navigate = useNavigate();
   const [formState, dispatch] = useReducer(reducer, initialState);
-  const [test, setIsAuthenticated] = useContext(AuthContext);
+  const [isAuthenticated, setIsisAuthenticated] = useContext(AuthContext);
   const handleInputChange = (event) => {
     const { id, value } = event.target;
     dispatch({ type: ACTIONS.HANDLE_INPUT_CHANGE, id, value });
   };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     dispatch({ type: ACTIONS.LOADING, isLoading: true });
@@ -65,9 +67,11 @@ const Login = () => {
         email: formState.email,
         password: formState.password,
       });
-      if (res.data) {
-        localStorage.setItem("token", res.data.token);
-        setIsAuthenticated(true);
+      localStorage.setItem("token", res.data.token);
+      setIsisAuthenticated(true);
+      console.log(res.data);
+      if (isAuthenticated) {
+        navigate(PATHS.DASHBOARD);
       }
     } catch (error) {
       if (error.isAxiosError) {
@@ -88,6 +92,11 @@ const Login = () => {
       dispatch({ type: ACTIONS.LOADING, isLoading: false });
     }
   };
+
+  // if (isAuthenticated) {
+  //   navigate(PATHS.DASHBOARD);
+  // }
+
   return (
     <Container>
       {formState.isLoading && <Loading />}

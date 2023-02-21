@@ -1,17 +1,24 @@
-import React from 'react'
-import { Navigate } from 'react-router-dom'
-import { useAuth } from '../../context';
+import React, { useEffect } from "react";
+import { Navigate } from "react-router-dom";
+import { useAuth } from "../../context";
 
 const RequiresAuth = ({ children }) => {
-    const { isAuthenticated } = useAuth();
+  const { isAuthenticated } = useAuth();
+  const token = localStorage.getItem("token");
 
-    if (!isAuthenticated) {
-        return <Navigate to="/login" />
+  useEffect(() => {
+    if (isAuthenticated) {
+      return <>{children}</>;
     }
+  }, [token]);
 
-    return (
-        <>{children}</>
-    )
-}
+  if (!isAuthenticated && false) {
+    return <Navigate to="/login" />;
+  } else if (!localStorage.getItem("token")) {
+    return <Navigate to="/login" />;
+  }
 
-export default RequiresAuth
+  return <>{children}</>;
+};
+
+export default RequiresAuth;
