@@ -5,6 +5,8 @@ import Title from "../../components/title";
 import Button from "../../components/Button";
 
 import { VerificationStyled } from "./VerificationStyled.js";
+import CustomLink from "../../components/CustomLink";
+import { PATHS } from "../../routes";
 const Verification = () => {
   return (
     <Container>
@@ -19,7 +21,9 @@ const Verification = () => {
             </li>
           </ul>
 
-          <Button>SUBMIT</Button>
+          <CustomLink to={PATHS.VERIFIED}>
+            <Button>SUBMIT</Button>
+          </CustomLink>
         </SignCard>
       </VerificationStyled>
     </Container>
