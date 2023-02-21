@@ -1,8 +1,8 @@
 import React from "react";
-import { H3 } from "../Typography";
+import { H1 } from "../Typography";
 
 const Label = ({ title }) => {
-  return <H3>{title}</H3>;
+  return <H1>{title}</H1>;
 };
 
 export default Label;
