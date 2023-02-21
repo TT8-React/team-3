@@ -1,4 +1,4 @@
-import { LoadingStyled } from "./LoadingStyled";
+import { LoadingStyled } from "./LoadingStyle";
 
 const Loading = () => {
   return (

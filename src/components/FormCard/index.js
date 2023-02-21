@@ -1,8 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 
-const FormCard = ({ children, padding }) => {
-  return <CardStyle padding={padding}>{children}</CardStyle>;
+const FormCard = ({ children, padding, className }) => {
+  return (
+    <CardStyle className={className} padding={padding}>
+      {children}
+    </CardStyle>
+  );
 };
 
 export default FormCard;
