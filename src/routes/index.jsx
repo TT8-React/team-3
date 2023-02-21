@@ -23,6 +23,8 @@ import GriReport from '../pages/GriReport';
 import MyReport from '../pages/MyReport';
 import ProfileDetails from '../pages/ProfileDetails';
 import SebiReport from '../pages/SebiReport';
+import Verification from "../pages/Verification";
+import Verified from "../pages/Verified";
 import RequiresAuth from "./components/RequiresAuth";
 
 const Router = () => {
@@ -32,6 +34,8 @@ const Router = () => {
       <Route index element={<RequiresAuth><Dashboard /></RequiresAuth>} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/forgot-password" element={<ForgotPassword />} />
+      <Route path="/verification" element={<Verification />} />
+      <Route path="/verified" element={<Verified />} />
       <Route path="/report">
         <Route index element={<RequiresAuth>
           <Report />
@@ -91,6 +95,8 @@ export const PATHS = {
   LOGIN: "/login",
   SIGN_UP: "/signup",
   FORGOT_PASSWORD: "/forgot-password",
+  VERIFICATION: "/verification",
+  VERIFICATION: "/verified",
   REPORT: "/report",
   REPORT_VIEW_ALL_REPORTS: "/report/view-all-reports",
   REPORT_EDIT: "/report/edit",
