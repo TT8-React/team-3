@@ -12,7 +12,7 @@ import { AuthContext } from "../../context";
 import { Container } from "../../components/Container";
 import FormCard from "../../components/FormCard";
 import Title from "../../components/title";
-import { validationSchemaSignIn } from "../../validation/validationSchema.js";
+import { SchemaLogin } from "../../validation/validationSchema.js";
 import { LogInStyled } from "./LoginStyled.js";
 const initialState = {
   email: "",
@@ -53,7 +53,7 @@ const Login = () => {
     e.preventDefault();
     dispatch({ type: ACTIONS.LOADING, isLoading: true });
     try {
-      await validationSchemaSignIn.validate(
+      await SchemaLogin.validate(
         {
           email: formState.email,
           password: formState.password,
