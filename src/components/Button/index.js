@@ -17,8 +17,9 @@ export const ButtonStyle = styled.button`
   cursor: pointer;
 
   transition: 0.3s box-shadow ease-in-out;
-  &:hover {
-    box-shadow: inset 100vw 0 0 0 ${({ theme }) => theme.pallet.light200};
-    transition: 0.6s box-shadow ease-in-out;
+  &:hover{
+    box-shadow: inset 20vw 0 0 0 ${({ theme }) => theme.pallet.light200};
+    transition: 0.5s box-shadow ease-in-out;
+    color: ${({ theme }) => theme.pallet.dark}
   }
 `;
