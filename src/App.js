@@ -1,22 +1,33 @@
-import styled from 'styled-components'
+//themes and global styles
+import { ThemeProvider } from "styled-components";
+import { defaultTheme } from "./global/themes";
+import Global from "./global/global";
 
-import { ThemeProvider } from 'styled-components';
-import { defaultTheme } from './global/themes';
-import Global from './global/global';
+// routes
+import Router from "./routes";
+
+// Error Boundary
+import ErrorBoundary from "./components/ErrorBoundary";
+import { AuthContext } from "./context";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [authenticated, setAuthenticated] = useState(false);
+  useEffect(() => {
+    localStorage.getItem("token") && setAuthenticated(true);
+  }, []);
   return (
     <>
       <ThemeProvider theme={defaultTheme}>
         <Global />
-        <Test>Team 3</Test>
+        <ErrorBoundary>
+          <AuthContext.Provider value={[authenticated, setAuthenticated]}>
+            <Router />
+          </AuthContext.Provider>
+        </ErrorBoundary>
       </ThemeProvider>
     </>
   );
 }
-
-const Test = styled.div`
-  color: ${({theme}) => theme.pallet.blueColor};
-`
 
 export default App;
