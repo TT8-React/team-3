@@ -22,31 +22,63 @@ import GriReport from '../pages/GriReport';
 import MyReport from '../pages/MyReport';
 import ProfileDetails from '../pages/ProfileDetails';
 import SebiReport from '../pages/SebiReport';
+import RequiresAuth from "./components/RequiresAuth";
 
 const Router = () => {
   return (
     <Routes>
-      <Route index element={<Dashboard />} />
       <Route path="/login" element={<Login />} />
+      <Route index element={<RequiresAuth><Dashboard /></RequiresAuth>} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/report">
-        <Route index element={<Report />} />
-        <Route path='view-all-reports' element={<MyReport />} />
-        <Route path='edit' element={<EditReport />} />
-        <Route path='create' element={<CreateReport />} />
-        <Route path='sebi' element={<SebiReport />} />
-        <Route path='gri' element={<GriReport />} />
-        <Route path='customize' element={<CustomizeReport />} />
+        <Route index element={<RequiresAuth>
+          <Report />
+        </RequiresAuth>} />
+        <Route path='view-all-reports' element={
+          <RequiresAuth>
+            <MyReport />
+          </RequiresAuth>
+        } />
+        <Route path='edit' element={<RequiresAuth>
+          <EditReport />
+        </RequiresAuth>
+        } />
+        <Route path='create' element={<RequiresAuth>
+          <CreateReport />
+        </RequiresAuth>} />
+        <Route path='sebi' element={<RequiresAuth>
+          <SebiReport />
+        </RequiresAuth>} />
+        <Route path='gri' element={<RequiresAuth>
+          <GriReport />
+        </RequiresAuth>} />
+        <Route path='customize' element={<RequiresAuth>
+          <CustomizeReport />
+        </RequiresAuth>} />
       </Route>
-      <Route path="/dataUpload" element={<DataUpload />} />
+      <Route path="/dataUpload" element={<RequiresAuth>
+        <DataUpload />
+      </RequiresAuth>} />
       <Route path="/analytics">
-        <Route index element={<Analytics />} />
-        <Route path="environment" element={<Environment />} />
-        <Route path="social" element={<Social />} />
-        <Route path="governance" element={<Governance />} />
+        <Route index element={<RequiresAuth>
+          <Analytics />
+        </RequiresAuth>} />
+        <Route path="environment" element={<RequiresAuth>
+          <Environment />
+        </RequiresAuth>} />
+        <Route path="social" element={<RequiresAuth>
+          <Social />
+        </RequiresAuth>} />
+        <Route path="governance" element={<RequiresAuth>
+          <Governance />
+        </RequiresAuth>} />
       </Route>
-      <Route path='/companyDetails' element={<CompanyDetails />} />
-      <Route path='/profile-details' element={<ProfileDetails />} />
+      <Route path='/companyDetails' element={<RequiresAuth>
+        <CompanyDetails />
+      </RequiresAuth>} />
+      <Route path='/profile-details' element={<RequiresAuth>
+        <ProfileDetails />
+      </RequiresAuth>} />
       <Route path='*' element={<NotFound />} />
     </Routes>
   );
