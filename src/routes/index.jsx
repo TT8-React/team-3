@@ -18,6 +18,7 @@ import {
 import CreateReport from '../pages/CreateReport';
 import CustomizeReport from '../pages/CustomizeReport';
 import EditReport from '../pages/EditReport';
+import ForgotPassword from "../pages/ForgotPassword";
 import GriReport from '../pages/GriReport';
 import MyReport from '../pages/MyReport';
 import ProfileDetails from '../pages/ProfileDetails';
@@ -30,6 +31,7 @@ const Router = () => {
       <Route path="/login" element={<Login />} />
       <Route index element={<RequiresAuth><Dashboard /></RequiresAuth>} />
       <Route path="/signup" element={<Signup />} />
+      <Route path="/forgot-password" element={<ForgotPassword />} />
       <Route path="/report">
         <Route index element={<RequiresAuth>
           <Report />
@@ -43,6 +45,7 @@ const Router = () => {
           <EditReport />
         </RequiresAuth>
         } />
+
         <Route path='create' element={<RequiresAuth>
           <CreateReport />
         </RequiresAuth>} />
@@ -88,6 +91,7 @@ export const PATHS = {
   DASHBOARD: "/",
   LOGIN: "/login",
   SIGN_UP: "/signup",
+  FORGOT_PASSWORD: "/forgot-password",
   REPORT: "/report",
   REPORT_VIEW_ALL_REPORTS: "/report/view-all-reports",
   REPORT_EDIT: "/report/edit",
